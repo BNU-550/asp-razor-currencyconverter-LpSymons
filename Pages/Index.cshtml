@@ -4,8 +4,30 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome To Razor Pages</h1>
-    <h2>by Louis Symons</h2>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div>
+    <header class="text-center">
+        <h1 class="display-4">Welcome To Razor Pages</h1>
+        <h2>by @Model.FullName</h2>
+    </header>
 </div>
+<br />
+<br />
+
+<form method="post" class="mx-auto" style="width:200px">
+    <p class="col-sm-2">
+        <label>Name</label>
+        <input type="text" required="true" placeholder="Your Full Name" asp-for="FullName" />
+    </p>
+    <p class="col-sm-2">
+        <label>Email</label>
+        <input type="email" required="true" name="email" />
+    </p>
+    <p class="col-sm-2">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </p>
+    <p class="col-sm-12">
+        @ViewData["Message"]
+    </p>
+</form>
+
+

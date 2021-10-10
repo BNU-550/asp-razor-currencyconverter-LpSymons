@@ -1,0 +1,29 @@
+﻿@page
+@model RazorCurrencyConverter.Pages.CurrencyConverterModel
+@{
+}
+<div class="text-center justify-content-center">
+
+    <div class="form-group jumbotron">
+        <h1 class="display-4">Currency Converter</h1>
+        <h4>Developed by Louis Symons</h4>
+        <h2>Currency Converter</h2>
+    </div>
+
+    <section>
+        <strong>Convert GBP to USD</strong>
+    </section>
+
+    <form class="col-xs-1" align="centre" method="post">
+        <input type="text" required placeholder="Enter amount to convert" name="Value" />
+        <button type="submit" class="btn btn-outline-primary">Convert</button>
+    </form>
+
+    <div>
+        Results
+        <label>@ViewData["Result"]</label>
+    </div>
+</div>
+
+
+
